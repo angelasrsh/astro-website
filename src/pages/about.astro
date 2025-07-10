@@ -1,5 +1,11 @@
 ---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
 const pageTitle = "About Me";
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 
 const identity = {
     firstName: "Angela",
@@ -17,6 +23,7 @@ const goal = 3;
 
 <html lang="en">
     <head>
+        <title>{pageTitle}</title>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
@@ -34,12 +41,10 @@ const goal = 3;
         </style>
     </head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
 
 
-        <h1>{pageTitle}</h1>
+        <BaseLayout pageTitle={pageTitle}>
+            <h2>My awesome About me Page</h2>
         <h2>... and my new Astro site!</h2>
 
         <p>
@@ -72,5 +77,10 @@ const goal = 3;
         <ul>
             {skills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
+        <script>
+            import "../scripts/menu.js";
+        </script>
+        </BaseLayout>
+
     </body>
 </html>

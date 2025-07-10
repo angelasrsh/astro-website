@@ -7,8 +7,10 @@ image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
+draft: false
+layout: ../../layouts/MarkdownPostLayout.astro
+
 ---
-# My First Blog Post
 
 Published on: 2022-07-01
 
